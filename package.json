@@ -26,7 +26,6 @@
   "homepage": "https://github.com/fcostarodrigo/rfc-nuke#readme",
   "devDependencies": {
     "eslint": "^3.15.0",
-    "eslint-config-google": "^0.7.1",
     "mocha": "^3.2.0"
   },
   "dependencies": {
