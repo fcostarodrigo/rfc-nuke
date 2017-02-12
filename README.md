@@ -1,4 +1,4 @@
-# RFC-WALK
+# RFC-NUKE
 
 Simple node module to remove files and folders recursively.
 
