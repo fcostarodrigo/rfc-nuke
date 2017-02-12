@@ -1,0 +1,34 @@
+{
+  "name": "rfc-nuke",
+  "version": "1.0.0",
+  "description": "Remove files and folders recursively",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "posttest": "npm run lint",
+    "lint": "jscs **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcostarodrigo/rfc-nuke.git"
+  },
+  "keywords": [
+    "remove",
+    "files",
+    "recursively",
+    "rm -rf"
+  ],
+  "author": "Rodrigo Fernandes da Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fcostarodrigo/rfc-nuke/issues"
+  },
+  "homepage": "https://github.com/fcostarodrigo/rfc-nuke#readme",
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "rfc-walk": "^1.0.1"
+  }
+}
