@@ -30,5 +30,6 @@
   },
   "dependencies": {
     "rfc-walk": "^1.0.1"
-  }
+  },
+  "files": []
 }
