@@ -3,25 +3,25 @@ const nuke = require("../.");
 
 describe("nuke", () => {
   it("should delete a file", async () => {
-    fs.writeFileSync("a", "");
-    await nuke("a");
+    fs.writeFileSync("tests/a", "");
+    await nuke("tests/a");
   });
 
   it("should delete an empty folder", async () => {
-    fs.mkdirSync("a");
-    await nuke("a");
+    fs.mkdirSync("tests/a");
+    await nuke("tests/a");
   });
 
   it("should delete a folder with a file inside", async () => {
-    fs.mkdirSync("a");
-    fs.writeFileSync("a/b", "");
-    await nuke("a");
+    fs.mkdirSync("tests/a");
+    fs.writeFileSync("tests/a/b", "");
+    await nuke("tests/a");
   });
 
   it("should delete a folder recursively", async () => {
-    fs.mkdirSync("a");
-    fs.mkdirSync("a/b");
-    fs.writeFileSync("a/b/c", "");
-    await nuke("a");
+    fs.mkdirSync("tests/a");
+    fs.mkdirSync("tests/a/b");
+    fs.writeFileSync("tests/a/b/c", "");
+    await nuke("tests/a");
   });
 });
