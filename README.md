@@ -1,28 +1,48 @@
 # RFC-NUKE
 
+[![Build Status](https://travis-ci.org/fcostarodrigo/rfc-nuke.svg?branch=master)](https://travis-ci.org/fcostarodrigo/rfc-nuke)
+[![Maintainability](https://api.codeclimate.com/v1/badges/878cca557dfef4bd7453/maintainability)](https://codeclimate.com/github/fcostarodrigo/rfc-nuke/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/878cca557dfef4bd7453/test_coverage)](https://codeclimate.com/github/fcostarodrigo/rfc-nuke/test_coverage)
+
 Simple node module to remove files and folders recursively.
 
 ## Installation
 
-    npm install rfc-nuke
+```bash
+npm install rfc-nuke
+```
 
 ## Usage
 
-    const nuke = require('rfc-nuke');
+```javascript
+const nuke = require("rfc-nuke");
 
-    nuke('a/b');
+nuke("path/to/remove").then(() => console.log("Files removed"));
+```
 
-## Reference
+## Documentation
 
-    nuke(pathToDelete)
+```typescript
+function nuke(pathToDelete: string): Promise<void>;
+```
 
-Remove folder and all files in it, including other folders.
+Removes files and folders recursively.
 
 * `pathToDelete`: Path with folder or file to delete.
 
 ## Development
 
-    npm test
+Full tests with coverage
+
+```bash
+npm test
+```
+
+Unit tests and watch for changes
+
+```bash
+npm run unit-test
+```
 
 ## License
 
