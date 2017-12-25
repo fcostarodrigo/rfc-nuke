@@ -1,8 +1,9 @@
 const fs = require("fs");
 const walk = require("rfc-walk");
 
-function nuke(root) {
-  for (const file of walk(root, true)) {
+const nuke = async root => {
+  const files = (await walk({ root, includeFolders: true })).reverse();
+  for (const file of files) {
     try {
       fs.unlinkSync(file);
     } catch (error) {
@@ -13,6 +14,6 @@ function nuke(root) {
       }
     }
   }
-}
+};
 
 module.exports = nuke;
