@@ -1,0 +1,8 @@
+{
+  "extends": ["airbnb-base", "plugin:jest/recommended", "prettier"],
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "no-restricted-syntax": "off",
+    "prettier/prettier": "error"
+  }
+}

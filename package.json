@@ -4,9 +4,17 @@
   "description": "Remove files and folders recursively",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "posttest": "npm run lint",
-    "lint": "eslint ."
+    "precommit": "lint-staged && npm test",
+    "test": "jest unit int --coverage",
+    "pretest": "eslint src",
+    "unit-test": "jest unit --watch",
+    "format": "prettier --write \"**/*.js\""
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,11 +33,18 @@
   },
   "homepage": "https://github.com/fcostarodrigo/rfc-nuke#readme",
   "devDependencies": {
-    "eslint": "^3.15.0",
-    "mocha": "^3.2.0"
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
   },
   "dependencies": {
-    "rfc-walk": "^1.0.1"
-  },
-  "files": []
+    "rfc-walk": "^3.0.2"
+  }
 }
