@@ -51,7 +51,7 @@ describe("nuke", () => {
     walk.mockReturnValue(["a", "a/b"]);
     mockCallbacks(fs.unlink, [
       { result: [null], args: ["a/b"] },
-      { result: [{ code: "EISDIR" }], args: ["a"] }
+      { result: [{ code: "EISDIR" }], args: ["a"] },
     ]);
     mockCallbacks(fs.rmdir, [{ result: [null], args: ["a"] }]);
     await nuke();
@@ -61,7 +61,7 @@ describe("nuke", () => {
     walk.mockReturnValue(["a", "b"]);
     mockCallbacks(fs.unlink, [
       { result: [null], args: ["b"] },
-      { result: [null], args: ["a"] }
+      { result: [null], args: ["a"] },
     ]);
     await nuke();
   });
