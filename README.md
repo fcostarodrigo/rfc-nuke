@@ -28,7 +28,7 @@ function nuke(pathToDelete: string): Promise<void>;
 
 Removes files and folders recursively.
 
-* `pathToDelete`: Path with folder or file to delete.
+- `pathToDelete`: Path with folder or file to delete.
 
 ## Development
 
