@@ -1,10 +1,10 @@
 # RFC-NUKE
 
 [![Build Status](https://travis-ci.org/fcostarodrigo/rfc-nuke.svg?branch=master)](https://travis-ci.org/fcostarodrigo/rfc-nuke)
-[![Maintainability](https://api.codeclimate.com/v1/badges/878cca557dfef4bd7453/maintainability)](https://codeclimate.com/github/fcostarodrigo/rfc-nuke/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/878cca557dfef4bd7453/test_coverage)](https://codeclimate.com/github/fcostarodrigo/rfc-nuke/test_coverage)
 
 Simple node module to remove files and folders recursively.
+
+DEPRECATED: See [@fcostarodrigo/nuke](https://www.npmjs.com/package/@fcostarodrigo/nuke)
 
 ## Installation
 
